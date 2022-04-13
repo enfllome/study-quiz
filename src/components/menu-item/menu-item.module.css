@@ -1,0 +1,23 @@
+.item svg {
+  fill: currentColor;
+  margin-right: 8px;
+}
+
+.item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--color-black-light);
+  transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+  color: var(--color-primary);
+  transition: color 0.3s ease-in-out;
+}

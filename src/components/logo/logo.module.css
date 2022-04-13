@@ -1,0 +1,14 @@
+.logo {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 0 auto;
+  margin-bottom: var(--gap);
+}
+
+.logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

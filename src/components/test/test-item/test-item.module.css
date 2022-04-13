@@ -1,0 +1,27 @@
+.item {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.image {
+  background-color: var(--color-primary);
+  min-height: 175px;
+}
+
+.info {
+  background-color: var(--color-gray);
+  padding: 20px 25px;
+}
+
+.descr {
+  margin: 0;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 29px;
+  color: #3B434E;
+}
+
+.descr span {
+  font-weight: 600;
+}
