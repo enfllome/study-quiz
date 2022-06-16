@@ -1,31 +1,23 @@
-import { Test } from '../../../types/test';
 import TestItem from '../test-item/test-item';
 import styles from './test-list.module.css';
+import { quizList } from '../../../mocks/quiz';
 
-const Tests: Test[] = [
-  {
-    id: 1,
-    title: 'Тема 1 Название темы',
-    questionsCount: 5,
-  },
-  {
-    id: 2,
-    title: 'Тема 2 Название Алалалаа',
-    questionsCount: 8,
-  },
-  {
-    id: 3,
-    title: 'Тема 1 Название Вакафалака',
-    questionsCount: 15,
-  },
-];
+type testListProps = {
+  sortType: { name: string; sort: string };
+};
 
-function TestList (): JSX.Element {
+function TestList({ sortType }: testListProps): JSX.Element {
+  const {sort} = sortType;
   return (
     <ul className={styles.list}>
-      {
-        Tests.map((test) => (<TestItem key={test.id} test={test}/>))
-      }
+      {sort === 'all' && quizList.map((test) => (
+        <TestItem key={test.id} test={test} />
+      ))}
+      {quizList
+        .filter((test) => test.type === sort)
+        .map((test) => (
+          <TestItem key={test.id} test={test} />
+        ))}
     </ul>
   );
 }
